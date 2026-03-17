@@ -1,14 +1,14 @@
-# Nerfies
+# BiGraspFormer: End-to-End Bimanual Grasp Transformer
 
 This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
 
-If you find Nerfies useful for your work please cite:
+If you find BiGraspFormer useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+@article{kim2025bigraspformer,
+  title={BiGraspFormer: End-to-End Bimanual Grasp Transformer},
+  author={Kim, Kangmin and Back, Seunghyeok and Lee, Geonhyup and Lee, Sangbeom and Noh, Sangjun and Lee, Kyoobin},
+  journal={arXiv preprint arXiv:2509.19142},
+  year={2025}
 }
 ```
 
