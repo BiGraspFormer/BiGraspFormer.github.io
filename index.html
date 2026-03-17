@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta charset="utf-8">
   <meta name="description" content="BiGraspFormer: End-to-End Bimanual Grasp Transformer">
@@ -21,15 +22,13 @@
     gtag('config', 'G-PYVRSFMDRL');
   </script>
 
-  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
-        rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
 
   <link rel="stylesheet" href="./static/css/bulma.min.css">
   <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
   <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
   <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
-  <link rel="stylesheet"
-        href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/favicon.svg">
 
@@ -39,111 +38,74 @@
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
 </head>
+
 <body>
 
-<nav class="navbar" role="navigation" aria-label="main navigation">
-  <div class="navbar-brand">
-    <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-      <span aria-hidden="true"></span>
-    </a>
-  </div>
-  <div class="navbar-menu">
-    <div class="navbar-start" style="flex-grow: 1; justify-content: center;">
-      <a class="navbar-item" href="https://keunhong.com">
-      <span class="icon">
-          <i class="fas fa-home"></i>
-      </span>
-      </a>
 
-      <div class="navbar-item has-dropdown is-hoverable">
-        <a class="navbar-link">
-          More Research
-        </a>
-        <div class="navbar-dropdown">
-          <a class="navbar-item" href="https://hypernerf.github.io">
-            HyperNeRF
-          </a>
-          <a class="navbar-item" href="https://nerfies.github.io">
-            Nerfies
-          </a>
-          <a class="navbar-item" href="https://latentfusion.github.io">
-            LatentFusion
-          </a>
-          <a class="navbar-item" href="https://photoshape.github.io">
-            PhotoShape
-          </a>
-        </div>
-      </div>
-    </div>
-
-  </div>
-</nav>
-
-
-<section class="hero">
-  <div class="hero-body">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">Nerfies: Deformable Neural Radiance Fields</h1>
-          <div class="is-size-5 publication-authors">
-            <span class="author-block">
-              <!-- <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span> -->
-              Kangmin Kim<sup>1</sup>,
-            <span class="author-block">
-              <!-- <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span> -->
-              Seunghyeok Back<sup>2</sup>,
-            <span class="author-block">
-              <!-- <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>, -->
-              Geonhyup Lee<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <!-- <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>, -->
-              Sangbeom Lee<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <!-- <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>, -->
-             Sangjun Noh<sup>1</sup>,
-            </span>
-            <span class="author-block">
-              <!-- <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>, -->
-             Kyoobin Lee<sup>1</sup>,
-            </span>
-            <!-- <span class="author-block">
+  <section class="hero">
+    <div class="hero-body">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">
+              <span class="gradient-text">BiGraspFormer:</span><br>
+              <span class="gradient-text">End-to-End Bimanual Grasp Transformer</span>
+            </h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">
+                <!-- <a href="https://keunhong.com">Keunhong Park</a><sup>1</sup>,</span> -->
+                Kangmin Kim<sup>1</sup>,
+                <span class="author-block">
+                  <!-- <a href="https://utkarshsinha.com">Utkarsh Sinha</a><sup>2</sup>,</span> -->
+                  Seunghyeok Back<sup>2</sup>,
+                  <span class="author-block">
+                    <!-- <a href="https://jonbarron.info">Jonathan T. Barron</a><sup>2</sup>, -->
+                    Geonhyup Lee<sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <!-- <a href="http://sofienbouaziz.com">Sofien Bouaziz</a><sup>2</sup>, -->
+                    Sangbeom Lee<sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <!-- <a href="https://www.danbgoldman.com">Dan B Goldman</a><sup>2</sup>, -->
+                    Sangjun Noh<sup>1</sup>,
+                  </span>
+                  <span class="author-block">
+                    <!-- <a href="https://homes.cs.washington.edu/~seitz/">Steven M. Seitz</a><sup>1,2</sup>, -->
+                    Kyoobin Lee<sup>1</sup>,
+                  </span>
+                  <!-- <span class="author-block">
               <a href="http://www.ricardomartinbrualla.com">Ricardo Martin-Brualla</a><sup>2</sup>
             </span> -->
-          </div>
+            </div>
 
-          <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>Gwangju Institute of Science and Technology (GIST),</span>
-            <span class="author-block"><sup>2</sup>Department of AI Machinery, Korea Institute of Machinery \& Materials (KIMM)</span>
-          </div>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block"><sup>1</sup>Gwangju Institute of Science and Technology (GIST),</span>
+              <span class="author-block"><sup>2</sup>Department of AI Machinery, Korea Institute of Machinery &
+                Materials (KIMM)</span>
+            </div>
 
-          <div class="column has-text-centered">
-            <div class="publication-links">
-              <!-- PDF Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2509.19142"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+            <div class="column has-text-centered">
+              <div class="publication-links">
+                <!-- PDF Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2509.19142" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fas fa-file-pdf"></i>
-                  </span>
-                  <span>Paper</span>
-                </a>
-              </span>
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2509.19142"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                    </span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2509.19142" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="ai ai-arxiv"></i>
-                  </span>
-                  <span>arXiv</span>
-                </a>
-              </span>
-              <!-- Video Link. -->
-              <!-- <span class="link-block">
+                    </span>
+                    <span>arXiv</span>
+                  </a>
+                </span>
+                <!-- Video Link. -->
+                <!-- <span class="link-block">
                 <a href="https://www.youtube.com/watch?v=MrKrnHhk8IA"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -152,18 +114,17 @@
                   <span>Video</span>
                 </a>
               </span> -->
-              <!-- Code Link. -->
-              <span class="link-block">
-                <a href="https://arxiv.org/abs/2509.19142"
-                   class="external-link button is-normal is-rounded is-dark">
-                  <span class="icon">
+                <!-- Code Link. -->
+                <span class="link-block">
+                  <a href="https://arxiv.org/abs/2509.19142" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon">
                       <i class="fab fa-github"></i>
-                  </span>
-                  <span>Code</span>
+                    </span>
+                    <span>Code</span>
                   </a>
-              </span>
-              <!-- Dataset Link. -->
-              <!-- <span class="link-block">
+                </span>
+                <!-- Dataset Link. -->
+                <!-- <span class="link-block">
                 <a href="https://github.com/google/nerfies/releases/tag/0.1"
                    class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
@@ -171,325 +132,361 @@
                   </span>
                   <span>Data</span>
                   </a> -->
-            </div>
+              </div>
 
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<section class="hero teaser">
-  <div class="container is-max-desktop">
+  <section class="hero teaser">
+    <div class="container is-max-desktop">
+      <div class="hero-body">
+        <video id="teaser" autoplay muted loop playsinline height="100%">
+          <source src="./static/videos/teaser.mp4" type="video/mp4">
+        </video>
+        <h2 class="subtitle has-text-centered">
+          <span class="dnerf">BiGraspFormer</span> enables generate stable bimanual grasps for dual arm robot
+          manipulation.
+        </h2>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- <section class="hero is-light is-small">
     <div class="hero-body">
-      <video id="teaser" autoplay muted loop playsinline height="100%">
-        <source src="./static/videos/teaser.mp4"
-                type="video/mp4">
-      </video>
-      <h2 class="subtitle has-text-centered">
-        <span class="dnerf">Nerfies</span> turns selfie videos from your phone into
-        free-viewpoint
-        portraits.
-      </h2>
-    </div>
-  </div>
-</section>
-
-
-<section class="hero is-light is-small">
-  <div class="hero-body">
-    <div class="container">
-      <div id="results-carousel" class="carousel results-carousel">
-        <div class="item item-steve">
-          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/steve.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-chair-tp">
-          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/chair-tp.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-shiba">
-          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/shiba.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-fullbody">
-          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/fullbody.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-blueshirt">
-          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/blueshirt.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-mask">
-          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/mask.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-coffee">
-          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/coffee.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <div class="item item-toby">
-          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/toby2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-    <!-- Abstract. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Abstract</h2>
-        <div class="content has-text-justified">
-          <p>
-            We present the first method capable of photorealistically reconstructing a non-rigidly
-            deforming scene using photos/videos captured casually from mobile phones.
-          </p>
-          <p>
-            Our approach augments neural radiance fields
-            (NeRF) by optimizing an
-            additional continuous volumetric deformation field that warps each observed point into a
-            canonical 5D NeRF.
-            We observe that these NeRF-like deformation fields are prone to local minima, and
-            propose a coarse-to-fine optimization method for coordinate-based models that allows for
-            more robust optimization.
-            By adapting principles from geometry processing and physical simulation to NeRF-like
-            models, we propose an elastic regularization of the deformation field that further
-            improves robustness.
-          </p>
-          <p>
-            We show that <span class="dnerf">Nerfies</span> can turn casually captured selfie
-            photos/videos into deformable NeRF
-            models that allow for photorealistic renderings of the subject from arbitrary
-            viewpoints, which we dub <i>"nerfies"</i>. We evaluate our method by collecting data
-            using a
-            rig with two mobile phones that take time-synchronized photos, yielding train/validation
-            images of the same pose at different viewpoints. We show that our method faithfully
-            reconstructs non-rigidly deforming scenes and reproduces unseen views with high
-            fidelity.
-          </p>
-        </div>
-      </div>
-    </div>
-    <!--/ Abstract. -->
-
-    <!-- Paper video. -->
-    <div class="columns is-centered has-text-centered">
-      <div class="column is-four-fifths">
-        <h2 class="title is-3">Video</h2>
-        <div class="publication-video">
-          <iframe src="https://www.youtube.com/embed/MrKrnHhk8IA?rel=0&amp;showinfo=0"
-                  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-      </div>
-    </div>
-    <!--/ Paper video. -->
-  </div>
-</section>
-
-
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <div class="columns is-centered">
-
-      <!-- Visual Effects. -->
-      <div class="column">
-        <div class="content">
-          <h2 class="title is-3">Visual Effects</h2>
-          <p>
-            Using <i>nerfies</i> you can create fun visual effects. This Dolly zoom effect
-            would be impossible without nerfies since it would require going through a wall.
-          </p>
-          <video id="dollyzoom" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/dollyzoom-stacked.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Visual Effects. -->
-
-      <!-- Matting. -->
-      <div class="column">
-        <h2 class="title is-3">Matting</h2>
-        <div class="columns is-centered">
-          <div class="column content">
-            <p>
-              As a byproduct of our method, we can also solve the matting problem by ignoring
-              samples that fall outside of a bounding box during rendering.
-            </p>
-            <video id="matting-video" controls playsinline height="100%">
-              <source src="./static/videos/matting.mp4"
-                      type="video/mp4">
+      <div class="container">
+        <div id="results-carousel" class="carousel results-carousel">
+          <div class="item item-steve">
+            <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/steve.mp4" type="video/mp4">
             </video>
           </div>
-
+          <div class="item item-chair-tp">
+            <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/chair-tp.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-shiba">
+            <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/shiba.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-fullbody">
+            <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/fullbody.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-blueshirt">
+            <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/blueshirt.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-mask">
+            <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/mask.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-coffee">
+            <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/coffee.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="item item-toby">
+            <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">
+              <source src="./static/videos/toby2.mp4" type="video/mp4">
+            </video>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Matting. -->
+  </section> -->
 
-    <!-- Animation. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Animation</h2>
 
-        <!-- Interpolating. -->
-        <h3 class="title is-4">Interpolating states</h3>
-        <div class="content has-text-justified">
-          <p>
-            We can also animate the scene by interpolating the deformation latent codes of two input
-            frames. Use the slider here to linearly interpolate between the left frame and the right
-            frame.
-          </p>
-        </div>
-        <div class="columns is-vcentered interpolation-panel">
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_start.jpg"
-                 class="interpolation-image"
-                 alt="Interpolate start reference image."/>
-            <p>Start Frame</p>
+  <section class="section">
+    <div class="container is-max-desktop">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Bimanual grasping is essential for robots to handle large and complex objects. However,
+              existing methods either focus solely on single-arm grasping or employ separate grasp
+              generation and bimanual evaluation stages, leading to coordination problems including
+              collision risks and unbalanced force distribution. To address these limitations, we
+              propose <span class="gradient-text" style="font-weight: bold;">BiGraspFormer</span>, a unified end-to-end
+              transformer framework that directly
+              generates coordinated bimanual grasps from object point clouds. Our key idea is the
+              Single-Guided Bimanual (SGB) strategy, which first generates diverse single grasp
+              candidates using a transformer decoder, then leverages their learned features through
+              specialized attention mechanisms to jointly predict bimanual poses and quality scores.
+              This conditioning strategy reduces the complexity of the 12-DoF search space while
+              ensuring coordinated bimanual manipulation. Comprehensive simulation experiments and
+              real-world validation demonstrate that BiGraspFormer consistently outperforms existing
+              methods while maintaining efficient inference speed (< 0.05s), confirming the effectiveness of our
+                framework. </p>
           </div>
-          <div class="column interpolation-video-column">
-            <div id="interpolation-image-wrapper">
-              Loading...
+        </div>
+      </div>
+      <!--/ Abstract. -->
+
+      <!-- Paper video. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <h2 class="title is-3">Video</h2>
+          <div class="publication-video">
+            <iframe src="https://www.youtube.com/embed/DLy6pUuu6qI" frameborder="0" allow="autoplay; encrypted-media"
+              allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+      <!--/ Paper video. -->
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <!-- Abstract. -->
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Method Overview</h2>
+          <div class="content has-text-justified">
+            <div class="columns is-centered has-text-centered">
+              <div class="column is-full">
+                <img src="./static/images/final model figure new.jpg" alt="Method Overview Diagram"
+                  style="width: 100%; border-radius: 10px;">
+              </div>
             </div>
-            <input class="slider is-fullwidth is-large is-info"
-                   id="interpolation-slider"
-                   step="1" min="0" max="100" value="0" type="range">
+            <p>
+              Our goal is to predict bimanual grasps from an object point cloud. This task is challenging as it involves
+              a 12-DoF action space, doubling the complexity of single-arm grasping. Each grasp needs to achieve
+              force-closure stability while both arms coordinate to avoid collisions, maintain torque balance, and
+              ensure overall stability. To tackle this challenge, we introduce the (SGB) grasp generation scheme, which
+              decomposes the
+              prediction of bimanual grasps into three structured stages. First, generate diverse single grasp
+              candidates under basic
+              stability constraints. Second, select feasible grasp pairs by discarding collisions and ensuring balanced
+              force distribution. Finally, refine these pairs into stable bimanual grasps using learned features from
+              both the object and single grasps. This formulation explicitly enforces both individual grasp quality and
+              dual-arm coordination, decomposing the complex 12-DoF search space into a sequence of more tractable
+              subproblems.
+            </p>
           </div>
-          <div class="column is-3 has-text-centered">
-            <img src="./static/images/interpolate_end.jpg"
-                 class="interpolation-image"
-                 alt="Interpolation end reference image."/>
-            <p class="is-bold">End Frame</p>
-          </div>
         </div>
-        <br/>
-        <!--/ Interpolating. -->
-
-        <!-- Re-rendering. -->
-        <h3 class="title is-4">Re-rendering the input video</h3>
-        <div class="content has-text-justified">
-          <p>
-            Using <span class="dnerf">Nerfies</span>, you can re-render a video from a novel
-            viewpoint such as a stabilized camera by playing back the training deformations.
-          </p>
-        </div>
-        <div class="content has-text-centered">
-          <video id="replay-video"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/replay.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ Re-rendering. -->
-
       </div>
-    </div>
-    <!--/ Animation. -->
+      <!--/ Method Overview. -->
+  </section>
 
 
-    <!-- Concurrent Work. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Related Links</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            There's a lot of excellent work that was introduced around the same time as ours.
-          </p>
-          <p>
-            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.
-          </p>
-          <p>
-            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>
-            both use deformation fields to model non-rigid scenes.
-          </p>
-          <p>
-            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>
-          </p>
-          <p>
-            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.
-          </p>
+  <section class="section">
+    <div class="container">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-full">
+          <h2 class="title is-3">Simulation Benchmark</h2>
+          <h3 class="title is-5">Simulation Environments</h3>
+          <div class="columns is-centered has-text-centered is-vcentered">
+            <div class="column is-half">
+              <img src="./static/images/simulation env figure4.jpeg" alt="Simulation Environment Diagram"
+                style="width: 100%; border-radius: 10px;">
+            </div>
+            <div class="column is-half">
+              <video id="simulation env" autoplay muted loop playsinline height="100%" style="border-radius: 10px;">
+                <source src="./static/videos/simulation env.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-    <!--/ Concurrent Work. -->
+    <div class="container is-max-desktop">
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-four-fifths">
+          <div class="content has-text-justified">
+            <p class="has-text-centered" style="font-weight: bold; margin-bottom: 5px;">Success rate and diversity at
+              top K% in easy simulation environments</p>
+            <img src="./static/images/sim_easy.png" alt="Simulation Easy" style="width: 100%; border-radius: 10px;">
+            <p class="has-text-centered" style="font-weight: bold; margin-bottom: 5px;">Success rate and diversity at
+              top K% in hard simulation environments</p>
+            <img src="./static/images/sim_hard.png" alt="Simulation Hard"
+              style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+            <p>
+              As demonstrated in the tables, our method achieves the state-of-the-art performance in both easy and hard
+              simulation settings. Notably, it also features the fastest inference speed among all compared methods,
+              while showing a more significant improvement in success rate in hard settings compared to easy settings.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Real Robot Experiments</h2>
+            <div class="content has-text-justified">
+              <h3 class="title is-5 has-text-centered">Real Robot Setting</h3>
+              <img src="./static/images/real_robot_setting.png" alt="Real Robot Setting"
+                style="width: 100%; border-radius: 10px; margin-bottom: 20px;">
+              <p>
+                Dual-arm robotic system with two UR5e arms and two Azure Kinect RGB-D cameras, along with test
+                objects and visualization of feasible bimanual grasps overlaid on object point clouds.
+                Collision-free trajectory execution of selected grasp poses for grasping and lifting diverse objects
+                including a stool, chair, and large box.
+              </p>
+              <h3 class="title is-5 has-text-centered">Real Evaluation</h3>
+              <video id="real-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/real_demo1.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+      </div>
 
-  </div>
-</section>
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">bluechair</p>
+              <video id="bluechair-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/bluechair_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">toybox</p>
+              <video id="toybox-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/toybox_all.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">White Shelf</p>
+              <video id="whiteshelf-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/whiteshelf.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">Yellow Stair</p>
+              <video id="yellowstair-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/yellowstair.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">Wood Stool</p>
+              <video id="whiteshelf-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/woodstool.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">White Frame</p>
+              <video id="yellowstair-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/whiteframe.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <div class="columns is-centered">
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">Green Bin</p>
+              <video id="whiteshelf-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/greenbin.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+          <div class="column is-half">
+            <div class="content">
+              <p class="has-text-left" style="font-weight: bold; margin-bottom: 5px;">Yellow Chair</p>
+              <video id="yellowstair-demo" autoplay muted loop playsinline height="100%"
+                style="width: 100%; border-radius: 10px;">
+                <source src="./static/videos/yellowchair.mp4" type="video/mp4">
+              </video>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
 
 
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{park2021nerfies,
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+
+
+
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content is-full">
+        <h2 class="title">BibTeX</h2>
+        <pre><code>@article{kim2025bigraspformer,
+  title={BiGraspFormer: End-to-End Bimanual Grasp Transformer},
+  author={Kim, Kangmin and Back, Seunghyeok and Lee, Geonhyup and Lee, Sangbeom and Noh, Sangjun and Lee, Kyoobin},
+  journal={arXiv preprint arXiv:2509.19142},
+  year={2025}
 }</code></pre>
-  </div>
-</section>
+      </div>
+    </section>
 
 
-<footer class="footer">
-  <div class="container">
-    <div class="content has-text-centered">
-      <a class="icon-link"
-         href="./static/videos/nerfies_paper.pdf">
-        <i class="fas fa-file-pdf"></i>
-      </a>
-      <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <div class="columns is-centered">
-      <div class="column is-8">
-        <div class="content">
-          <p>
-            This website is licensed under a <a rel="license"
-                                                href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-            Commons Attribution-ShareAlike 4.0 International License</a>.
-          </p>
-          <p>
-            This means you are free to borrow the <a
-              href="https://github.com/nerfies/nerfies.github.io">source code</a> of this website,
-            we just ask that you link back to this page in the footer.
-            Please remember to remove the analytics code included in the header of the website which
-            you do not want on your website.
-          </p>
+    <footer class="footer">
+      <div class="container">
+        <div class="content has-text-centered">
+          <a class="icon-link" href="./static/videos/nerfies_paper.pdf">
+            <i class="fas fa-file-pdf"></i>
+          </a>
+          <a class="icon-link" href="https://github.com/keunhong" class="external-link" disabled>
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+        <div class="columns is-centered">
+          <div class="column is-8">
+            <div class="content">
+              <p>
+                This website is licensed under a <a rel="license"
+                  href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+                  Commons Attribution-ShareAlike 4.0 International License</a>.
+              </p>
+              <p>
+                Website template modified from <a href="https://nerfies.github.io">NeRFies</a>.
+              </p>
+              <p>
+                This means you are free to borrow the <a href="https://github.com/nerfies/nerfies.github.io">source
+                  code</a> of this website,
+                we just ask that you link back to this page in the footer.
+                Please remember to remove the analytics code included in the header of the website which
+                you do not want on your website.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</footer>
+    </footer>
 
 </body>
+
 </html>
